@@ -71,8 +71,12 @@ header {
     font-weight: 300;
     border-top: 2px solid @accent;
     background-color: @quote-gray;
-    padding: 10px 0;
+    padding: 10px;
     margin: 0 auto;
+
+    @media (max-width: 800px) {
+        font-size: .8rem
+    }
     
     .header {
         display: flex;
@@ -85,7 +89,7 @@ header {
         }
     
         div {
-            width: 33.33%;
+            width: 40%;
         }
 
         .social-icons {
@@ -101,8 +105,9 @@ header {
 footer {
     font-weight: 300;
     background-color: #f0f0f0;
-    padding: 1.5rem 0px 3rem 0px;
+    padding: 20px 0px 50px 0px;
     margin: 0 auto;
+    padding: 10px;
 
     p {
         display: flex;
@@ -111,6 +116,10 @@ footer {
         margin: 0 auto;
         color: @dark-gray;
 
+    }
+
+    @media (max-width: 800px) {
+        font-size: .8rem
     }
     
 }
@@ -147,7 +156,13 @@ footer {
             text-decoration: none;
         }
     }
-    
+
+    // Mobile: stack vertically
+    @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 // ABOUT
