@@ -83,7 +83,7 @@ function App() {
               <span className="contact-text">Get in touch ▸</span>
               {showLinks && (
                 <span className="links">
-                  <a href="mailto:caroline.ghisolfi@houstonchronicle.com" target="_blank">Email</a> · <a href="https://www.linkedin.com/in/caroline-ghisolfi/" target="_blank">LinkedIn</a>
+                  <a href="mailto:caroline.ghisolfi@houstonchronicle.com">Email</a> · <a href="https://www.linkedin.com/in/caroline-ghisolfi/" target="_blank">LinkedIn</a>
                 </span>
               )}
             </div>
