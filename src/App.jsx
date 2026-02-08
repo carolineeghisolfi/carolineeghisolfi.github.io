@@ -87,6 +87,9 @@ function App() {
                 </span>
               )}
             </div>
+            <div className="resume-button">
+            <a href="https://drive.google.com/file/d/1AIJusbFtYm8jN1JNwdhHYGxc0FvMXIt6/view" target="_blank" className="resume-button">Resume</a>
+            </div>
           </div>
         </section>
 
