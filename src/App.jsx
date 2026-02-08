@@ -105,7 +105,10 @@ function App() {
           <h2>Clips</h2>
           <div className="clips-list">
             {
-              data.clips && data.clips.sort((a, b) => new Date(b.pub_date) - new Date(a.pub_date)).map(clip => (
+              data.clips && data.clips
+              .filter(clip => clip.publish === 'TRUE')
+              .sort((a, b) => new Date(b.pub_date) - new Date(a.pub_date))
+              .map(clip => (
                 <div className="clip-item">
                   <div>
                     <span className="pub-site">{clip.pub_site}</span> · 
