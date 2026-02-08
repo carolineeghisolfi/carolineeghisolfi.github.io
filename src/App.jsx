@@ -114,7 +114,7 @@ function App() {
                     <span className="pub-site">{clip.pub_site}</span> · 
                     {' '}<span className="pub-date">{new Date(clip.pub_date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
                   </div>
-                  <h3><a href={clip.live_url ? clip.live_url : clip.pdf_url}>{clip.headline}</a></h3>
+                  <h3><a href={clip.live_url ? clip.live_url : clip.pdf_url} target="_blank">{clip.headline}</a></h3>
                   {clip.pdf_url && <span className="pdf-url"><a href={clip.pdf_url} target="_blank">DOWNLOAD PDF</a></span>}
                   {clip.synopsis && <p className="synopsis" dangerouslySetInnerHTML={{ __html: clip.synopsis }}/>}
                   {clip.impact && <p className="impact" dangerouslySetInnerHTML={{ __html: clip.impact }}/>}
