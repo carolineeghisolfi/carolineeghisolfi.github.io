@@ -1,0 +1,219 @@
+@accent: #e85d04;
+@background: #f5f5f5;
+@dark-gray: #3d3d3d;
+@light-gray: #c4c4c4;
+@quote-gray: #edebea;
+@timeline-dot-size: .5rem;
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: @background;
+    font-weight: 200;
+
+    h1 {
+        font-size: 34px;
+        font-weight: 300;
+        margin: 0;
+
+        .subtitle {
+            font-weight: 200;
+        }
+
+        .subtitle::before {
+            content: ' '
+        }
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 300;
+        padding: 0;
+        margin: 0;
+    }
+
+    section {
+        padding: 2rem 0;
+    }
+
+    hr {
+        border: none;
+        height: 1px;
+        background: @light-gray;
+    }
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+    color: inherit; /* This makes the link inherit the color of its parent element */
+    text-decoration: none
+    }
+
+    a:hover,
+    a:active {
+        color: @accent
+    }
+
+    strong {
+        font-weight: 300;
+        color: @accent;
+    }
+}
+
+header {
+    font-size: 24px;
+    font-weight: 300;
+    border-top: 2px solid @accent;
+    background-color: @quote-gray;
+    padding: 10px 0;
+    margin: 0 auto;
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        max-width: 650px;
+        margin: 0 auto;
+
+        h2 {
+            margin: 0;
+        }
+    
+        div {
+            width: 33.33%;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            color: @dark-gray;
+        }
+
+    }
+}
+
+footer {
+    font-weight: 300;
+    background-color: #f0f0f0;
+    padding: 1.5rem 0px 3rem 0px;
+    margin: 0 auto;
+
+    p {
+        display: flex;
+        justify-content: space-between;
+        max-width: 650px;
+        margin: 0 auto;
+        color: @dark-gray;
+
+    }
+    
+}
+
+.container {
+    width: 650px;
+    max-width: 90vw;
+    margin: 1rem auto;
+}
+
+// INTRO
+.intro {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+
+    .profile-image {
+
+        padding-right: 2rem;
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    .contact {
+        font-weight: 300;
+
+        .links {
+            padding-left: 1rem;
+            text-decoration: none;
+        }
+    }
+    
+}
+
+// ABOUT
+.about {
+    p {
+        white-space: pre-line;
+    }
+}
+
+
+
+// CLIPS
+.clips {
+    .clips-list {
+        position: relative;
+    }
+    .clip-item {
+        padding-left: 1rem;
+        position: relative;
+        padding-bottom: 2rem;
+
+        .pub-site, .pub-date{
+            font-weight: 100;
+        }
+
+        .pdf-url {
+            font-size: 13px;
+        }
+
+        .synopsis {
+            background-color: @quote-gray;
+            padding: 8px;
+        }
+
+        .impact::before {
+            content: 'Impact: ';
+            font-weight: 300;
+        }
+
+        .awards::before {
+            content: 'Awards: ';
+            font-weight: 300;
+        }
+
+    }
+    // Clips line
+    .clips-list::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: @timeline-dot-size;  // start at first dot's center
+        bottom: 2rem;  // end at last dot's center
+        width: 1px;
+        background: @light-gray;
+    }
+    // Clips dots
+    .clip-item::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: @timeline-dot-size;
+        left: calc(-@timeline-dot-size/2 - .5px);
+        width: @timeline-dot-size;
+        height: @timeline-dot-size;
+        background: @accent;
+        border-radius: 50%;
+        border: 1px solid @background;
+    }
+}
